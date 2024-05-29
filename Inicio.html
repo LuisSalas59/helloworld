@@ -34,14 +34,14 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('/api/images')
+            fetch('/api/boletines')
                 .then(response => response.json())
                 .then(images => {
                     const imageContainer = document.getElementById('imageContainer');
                     images.forEach(image => {
                         const imageItem = document.createElement('div');
                         imageItem.className = 'imageItem';
-                        imageItem.innerHTML = `<img src="/images/${image}" alt="${image}">`;
+                        imageItem.innerHTML = `<img src="/boletines/${image}" alt="${image}">`;
                         imageContainer.appendChild(imageItem);
                     });
                 })
