@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "http://D:\\Proyecto\\Imagenes\\helloworld\\boletines",
+            "request": "launch",
+            "url": "http://D:\\Proyecto\\Imagenes\\helloworld\\boletines"
+        }
+    ]
+}
