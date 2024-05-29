@@ -1,4 +1,36 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Local Directory</title>
+</head>
+<body>
+    <form id="fileForm" enctype="multipart/form-data">
+        <label for="fileInput">Selecciona directorio:</label>
+        <input type="file" id="fileInput" webkitdirectory directory multiple />
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="fileList"></div>
+
+    <script>
+        document.getElementById('fileForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const fileList = document.getElementById('fileInput').files;
+            const fileListDiv = document.getElementById('fileList');
+            fileListDiv.innerHTML = ''; // Limpiar la lista anterior
+            for (let i = 0; i < fileList.length; i++) {
+                const listItem = document.createElement('div');
+                listItem.textContent = fileList[i].name;
+                fileListDiv.appendChild(listItem);
+            }
+        });
+    </script>
+</body>
+</html>
+
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -11,5 +43,5 @@
 
 <script src="scripts.js"></script>
 </body>
-</html>
+</html>-->
 
