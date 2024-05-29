@@ -34,7 +34,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('/api/boletines')
+            fetch('/boletines')
                 .then(response => response.json())
                 .then(images => {
                     const imageContainer = document.getElementById('imageContainer');
